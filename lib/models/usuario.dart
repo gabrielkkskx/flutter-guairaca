@@ -1,7 +1,7 @@
 class usuario{
-    final String name, //var tipo final só recebe um valor e não é editavel depois
-    final String email,
-    final String cpf,
+    final String name; //var tipo final só recebe um valor e não é editavel depois
+    final String email;
+    final String cpf;
 
     Usuario({
         required this.nome,
