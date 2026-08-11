@@ -30,6 +30,9 @@ void main() {
   contador *= 4;
 
   estruturaControle();
+  mapExemplo();
+  lista();
+  setExemplo();
   runApp(const MyApp());
 }
 
@@ -58,6 +61,8 @@ void estruturaControle() {
   } while(senha < 1);
 
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
