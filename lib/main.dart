@@ -36,7 +36,7 @@ void main() {
   ];
 
   for(var usuario in usuarios){
-    usuario.exibirInformacoes;
+    usuario.exibirInformacoes();
   }
 
   runApp(const MyApp());
