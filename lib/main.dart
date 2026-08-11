@@ -29,10 +29,7 @@ void main() {
   contador += 2;
   contador *= 4;
 
-  estruturaControle();
-  mapExemplo();
-  lista();
-  setExemplo();
+  
   runApp(const MyApp());
 }
 

@@ -1,15 +1,22 @@
-class Administrador{
-    String login;
-    String senha;
+import 'package:flutter-guairaca/models/usuario.dart';
+
+class Administrador extends Usuario{
+    String _cargo;
 
     Administrador({
-        required this.login,
-        required this.senha
-    });
+        required super.nome,
+        required super.email,
+        required super.senha,
+        required String cargo,
+    }) :_cargo = cargo
 
-    void setLogin(String login, String senha){
-        this.login = login;
-        this.senha = senha;
+    //Getters e Setters
+    String get cargo => _cargo;
+    set cargo(String novoCargo) {_cargo = novoCargo;}
+
+    @override
+    void _exibirInformacoes(){
+        print('Nome: ${super.nome} Email: ${super.email} Senha ${super.senha} Cargo ${cargo}');
     }
-
+    
 }
