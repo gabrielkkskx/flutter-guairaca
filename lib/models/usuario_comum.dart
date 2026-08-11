@@ -15,7 +15,7 @@ class usuario_comum extends usuario{
     set vale(String novoVale) {_vale = novoVale;}
 
     @override
-    void _exibirInformacoes(){
+    void exibirInformacoes(){
         print('Nome: ${super.nome} Email: ${super.email} Senha ${super.senha} Vale: $vale');
     }
 }

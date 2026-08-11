@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter-guairaca/models/usuario.dart';
 
 void main() {
   // Tipos basicos
@@ -29,7 +30,15 @@ void main() {
   contador += 2;
   contador *= 4;
 
-  
+  List<Usuario> usuarios = [
+    Administrador(nome: 'Gabriel', cargo:'Zero', senha: '1234', email: 'gabriel@email'),
+    UsuarioComum(nome: 'Jorge', email: 'jorge67@email',  senha: '1234', vale: '750'),
+  ];
+
+  for(var usuario in usuarios){
+    print(usuario.exibirInformacoes);
+  }
+
   runApp(const MyApp());
 }
 
