@@ -31,8 +31,17 @@ void main() {
   contador *= 4;
 
   List<Usuario> usuarios = [
-    Administrador(nome: 'Gabriel', cargo:'Zero', senha: '1234', email: 'gabriel@email'),
-    UsuarioComum(nome: 'Jorge', email: 'jorge67@email',  senha: '1234', vale: '750'),
+    Administrador(
+      nome: 'Gabriel',
+      cargo:'Zero',
+      senha: '1234',
+      email: 'gabriel@email'),
+
+    UsuarioComum(
+      nome: 'Jorge',
+      email: 'jorge67@email',
+      senha: '1234',
+      vale: '750'),
   ];
 
   for(var usuario in usuarios){
