@@ -1,5 +1,7 @@
-import 'flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'models/usuario.dart';
+import 'models/administrador.dart';
+import 'models/usuario_comum.dart';
 
 void main() {
   // Tipos basicos
@@ -35,13 +37,15 @@ void main() {
       nome: 'Gabriel',
       cargo:'Zero',
       senha: '1234',
-      email: 'gabriel@email'),
+      email: 'gabriel@email',
+    ),
 
     UsuarioComum(
       nome: 'Jorge',
       email: 'jorge67@email',
       senha: '1234',
-      vale: '750'),
+      vale: '750',
+    ),
   ];
 
   for(var usuario in usuarios){
@@ -104,13 +108,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return MaterialApp(
-        home: Scaffold(
+    return MaterialApp(
+      home: Scaffold(
         appBar: AppBar(title: const Text('Olá flutter')),
-        body: const Center(
-        child: Text("Hello World", style: TextStyle(fontSize: 24),),
-    )
-  )
-  );
-}
+        body: Center(
+          child: Text("Hello World", style: TextStyle(fontSize: 24)),
+        ),
+      ),
+    );
+  }
 }
