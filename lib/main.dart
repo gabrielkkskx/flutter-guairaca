@@ -3,9 +3,9 @@ import 'package:flutter-guairaca/models/usuario.dart';
 
 void main() {
   // Tipos basicos
-  String nome = 'Matheus';
-  int idade = 28;
-  double altura = 1.87;
+  String nome = 'Gabriel';
+  int idade = 18;
+  double altura = 1.70;
   bool ativo = true;
 
   var cidade = 'Guarapuava'; // tipo inferido, pode reatribuir
