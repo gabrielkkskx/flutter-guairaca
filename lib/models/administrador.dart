@@ -8,14 +8,14 @@ class Administrador extends Usuario{
         required super.email,
         required super.senha,
         required String cargo,
-    }) :_cargo = cargo
+    }) :_cargo = cargo;
 
     //Getters e Setters
     String get cargo => _cargo;
     set cargo(String novoCargo) {_cargo = novoCargo;}
 
     @override
-    void _exibirInformacoes(){
+    void exibirInformacoes(){
         print('Nome: ${super.nome} Email: ${super.email} Senha ${super.senha} Cargo ${cargo}');
     }
     

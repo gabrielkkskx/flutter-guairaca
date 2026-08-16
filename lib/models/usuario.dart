@@ -1,5 +1,5 @@
-class usuario{
-    final String name; //var tipo final só recebe um valor e não é editavel depois
+class Usuario{
+    final String nome; //var tipo final só recebe um valor e não é editavel depois
     final String email;
     final String cpf;
 
@@ -9,11 +9,11 @@ class usuario{
         required this.cpf
     });
 
-    void apresentar(){
+    void exibirInformacoes(){
         print('Olá, meu nome é $nome, meu email: $email, meu cpf: $cpf');
     }
 
-    void _apresentarPrivado(){
+    void _exibirInformacoes(){
         print('Olá, meu nome é $nome, meu email: $email, meu cpf: $cpf');
     }
 }

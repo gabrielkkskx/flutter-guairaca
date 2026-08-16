@@ -1,6 +1,6 @@
 import 'package:flutter-guairaca/models/usuario.dart';
 
-class usuario_comum extends usuario{
+class UsuarioComum extends Usuario{
     String _vale;
 
     UsuarioComum({
@@ -19,6 +19,3 @@ class usuario_comum extends usuario{
         print('Nome: ${super.nome} Email: ${super.email} Senha ${super.senha} Vale: $vale');
     }
 }
-
-
-
