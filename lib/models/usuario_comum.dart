@@ -1,21 +1,23 @@
-import 'models/usuario.dart';
+import 'usuario.dart';
 
-class UsuarioComum extends Usuario{
-    String _vale;
+class UsuarioComum extends Usuario {
+  String _vale;
 
-    UsuarioComum({
-        required super.nome,
-        required super.email,
-        required super.senha,
-        required String vale
-    }) : _vale = vale;
+  UsuarioComum({
+    required super.nome,
+    required super.email,
+    required super.senha,
+    required String vale,
+  }) : _vale = vale;
 
-    //Getter e Setter vale
-    String get vale => _vale;
-    set vale(String novoVale) {_vale = novoVale;}
+  // Getter e Setter vale
+  String get vale => _vale;
+  set vale(String novoVale) {
+    _vale = novoVale;
+  }
 
-    @override
-    void exibirInformacoes(){
-        print('Nome: ${super.nome} Email: ${super.email} Senha ${super.senha} Vale: $vale');
-    }
+  @override
+  void exibirInformacoes() {
+    print('Nome: $nome Email: $email Senha: $senha Vale: $vale');
+  }
 }
