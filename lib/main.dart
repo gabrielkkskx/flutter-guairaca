@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter-guairaca/models/usuario.dart';
+import 'flutter/material.dart';
+import 'models/usuario.dart';
 
 void main() {
   // Tipos basicos

@@ -1,3 +1,5 @@
+import 'models/usuario.dart';
+
 class Usuario{
     final String nome; //var tipo final só recebe um valor e não é editavel depois
     final String email;

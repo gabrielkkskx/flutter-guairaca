@@ -1,4 +1,4 @@
-import 'package:flutter-guairaca/models/usuario.dart';
+import 'models/usuario.dart';
 
 class Administrador extends Usuario{
     String _cargo;

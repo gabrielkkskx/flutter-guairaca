@@ -1,4 +1,4 @@
-import 'package:flutter-guairaca/models/usuario.dart';
+import 'models/usuario.dart';
 
 class UsuarioComum extends Usuario{
     String _vale;
