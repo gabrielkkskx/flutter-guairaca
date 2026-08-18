@@ -111,12 +111,15 @@ class MyApp extends StatelessWidget { //extende o widget imutado
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text(
-            'Olá, eu sou o widget',
-            style: TextStyle(fontSize: 24),
-          ) //Text
+         child: Column(
+          MainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Saudacao(nome: "Matheus"),
+            Saudacao(nome: "Gabriel"),
+          ],
+         ), //Column
         ), //Center
-      ) // Scaffold
+      ), // Scaffold
     ); //MaterialApp
   }
 }
