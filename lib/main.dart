@@ -109,18 +109,26 @@ class MyApp extends StatelessWidget { //extende o widget imutado
 
   @override
   Widget build(BuildContext context){
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 43, 0, 51), 
         body: Center(
          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Saudacao(nome: "Matheus"),
-            Saudacao(nome: "Gabriel"),
+            Saudacao(nome: "Matheus", color: Colors.grey),
+            Saudacao(nome: "Gabriel", color: Colors.grey),
+            Text('Título da aula', style: TextStyle(color: const Color.fromARGB(255, 129, 2, 151), fontSize: 32),),
+            Icon(
+              Icons.audiotrack,
+              color: const Color.fromARGB(255, 65, 255, 47),
+              size: 30.0,
+            ),
+            Image.asset('assets/images/images.jpg', height: 180, width: 340, fit: BoxFit.cover,),
           ],
-         ), //Column
-        ), //Center
-      ), // Scaffold
-    ); //MaterialApp
+         ),
+        ),
+      ),
+    );
   }
 }
