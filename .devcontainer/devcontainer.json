@@ -1,0 +1,20 @@
+{
+  "name": "Flutter Development",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.dart-code",
+        "Dart-Code.flutter"
+      ],
+      "settings": {
+        "dart.closingLabels": true,
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "postCreateCommand": "git clone https://github.com/flutter/flutter.git -b stable $HOME/flutter && echo 'export PATH=\"$HOME/flutter/bin:$PATH\"' >> $HOME/.bashrc"
+}
