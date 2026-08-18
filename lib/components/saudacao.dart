@@ -1,4 +1,4 @@
-import 'flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class Saudacao extends StatelessWidget{
   final String nome;
@@ -11,7 +11,7 @@ class Saudacao extends StatelessWidget{
       padding: const EdgeInsets.all(8.0),
       child: Text(
         'Olá $nome, Bem vindo a UniGuairacá',
-        style: const TextStyle{fontSize: 20, backgroundColor: color(123123)},
+        style: const TextStyle(fontSize: 20, backgroundColor: Color(123123)),
       ), //Text
     ); //Padding
   }
