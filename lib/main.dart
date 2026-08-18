@@ -103,18 +103,20 @@ void setExemplo() {
   print('Ids unicos $idsUnicos');
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { //extende o widget imutado
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context){
+    return const MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Olá flutter')),
         body: Center(
-          child: Text("Hello World", style: TextStyle(fontSize: 24)),
-        ),
-      ),
-    );
+          child: Text(
+            'Olá, eu sou o widget',
+            style: TextStyle(fontSize: 24),
+          ) //Text
+        ), //Center
+      ) // Scaffold
+    ); //MaterialApp
   }
 }
