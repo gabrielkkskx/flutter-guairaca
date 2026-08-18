@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget { //extende o widget imutado
       home: Scaffold(
         body: Center(
          child: Column(
-          MainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Saudacao(nome: "Matheus"),
             Saudacao(nome: "Gabriel"),
