@@ -116,9 +116,9 @@ class MyApp extends StatelessWidget { //extende o widget imutado
          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Título da aula', style: TextStyle(color: const Color.fromARGB(255, 129, 2, 151), fontSize: 32),),
             Saudacao(nome: "Matheus", color: Colors.grey),
             Saudacao(nome: "Gabriel", color: Colors.grey),
-            Text('Título da aula', style: TextStyle(color: const Color.fromARGB(255, 129, 2, 151), fontSize: 32),),
             Icon(
               Icons.audiotrack,
               color: const Color.fromARGB(255, 65, 255, 47),
