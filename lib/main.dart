@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniguairaca/components/profile_card.dart';
 import 'package:uniguairaca/components/saudacao.dart';
 import 'package:uniguairaca/models/administrador.dart';
 import 'package:uniguairaca/models/usuario-comum.dart';
@@ -100,21 +101,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Saudacao(nome: "Matheus"),
-              Saudacao(nome: "Joao"),
-              Text('Titulo da aula', style: TextStyle(color: Colors.deepOrange, fontSize: 32),),
-              Icon(
-                Icons.audiotrack,
-                color: Colors.green,
-                size: 30.0,
-              ),
-              Image.asset('../assets/images/logo.jpg', height: 180, width: 180, fit: BoxFit.cover,),
-            ],
-          ),
+        appBar: AppBar(title: const Text('Aula componentes')),
+        body: ListView(
+          children: const [
+            ProfileCard(name: 'Matheus', role: 'SEO'),
+            ProfileCard(name: 'Jotair', role: 'BOSS'),
+            ProfileCard(name: 'Zampi', role: 'Sem mundial'),
+          ],
         ),
       ),
     );
