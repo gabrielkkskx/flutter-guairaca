@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget { //extende o widget imutado
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
-        appBar: appBar(title: const text('Aula componentes')),
+        appBar: AppBar(title: const Text('Aula componentes')),
         body: ListView(
           children: const [
             ProfileCard(name: 'Gabriel', role: 'sla'),
