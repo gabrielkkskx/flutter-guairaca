@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 
 class DefaultFirebaseOptions {
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA5f4d60qcj9iaMcUibndOqNl5thDYxPTc',
+    apiKey: 'AIzaSyCUzW9OqIBenovtmMQApKUw4a32mQ7BHC8',
     authDomain: 'flutter-financas-uniguairaca.firebaseapp.com',
     projectId: 'flutter-financas-uniguairaca',
     storageBucket: 'flutter-financas-uniguairaca.firebasestorage.app',
