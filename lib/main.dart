@@ -1,32 +1,115 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:guia_financeiro/firebase_options.dart';
-import 'package:intl/date_symbol_data_local.dart';
+import 'package:uniguairaca/components/profile_card.dart';
+import 'package:uniguairaca/components/saudacao.dart';
+import 'package:uniguairaca/models/administrador.dart';
+import 'package:uniguairaca/models/usuario-comum.dart';
+import 'package:uniguairaca/models/usuario.dart';
 
-import 'app.dart';
+void main() {
+  // Tipos basicos
+  String nome = 'Matheus';
+  int idade = 28;
+  double altura = 1.87;
+  bool ativo = true;
 
-/// Ponto de entrada do app.
-///
-/// Tudo o que precisa acontecer **antes** da primeira tela aparecer mora aqui:
-/// inicialização de locale, Firebase, orientação de tela, etc. A árvore de
-/// widgets em si fica em `app.dart`.
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  var cidade = 'Guarapuava'; // tipo inferido, pode reatribuir
+  final data = '04 de Julho'; // Valor definido em execução, imutavel
+  const limiteMaximo = 100; // valor fixo em tempo de compilaçao
 
-  // Carrega os símbolos de data em português — sem isso, `DateFormat(..., 'pt_BR')`
-  // lança exceção em tempo de execução.
-  await initializeDateFormatting('pt_BR');
+  // Nullable e operador de coalescencia nula (??)
+  int? nota;
+  int notaFinal = nota ?? 0;
 
-  await Firebase.initializeApp(options: firebaseOptions);
-  // TODO(aula-firebase): habilitar o Firebase.
-  // 1. Instale a CLI:            dart pub global activate flutterfire_cli
-  // 2. Gere a configuração:      flutterfire configure
-  //    (isso cria lib/firebase_options.dart)
-  // 3. Descomente as linhas abaixo e o import correspondente.
-  //
-  // await Firebase.initializeApp(
-  //   options: DefaultFirebaseOptions.currentPlatform,
-  // );
+  // Operadores aritmeticos
+  int a = 10;
+  int b = 20;
+  print('Soma: ${a + b}');
+  int c = 15, d = 25, e = 20;
 
-  runApp(const GuiaFinanceiroApp());
+  // Operadores relacionais e lógicos  
+  bool podeVotar = idade >= 16 && idade <= 120;
+
+  // Operador de atribuição composta
+  int contador = 0;
+  contador += 2;
+  contador *= 4;
+  
+  List<Usuario> usuarios = [
+    Administrador(nome: 'Matheus', cargo: 'Analista', senha: '1234', email: 'mat@email'),
+    UsuarioComum(nome: 'Joao', email: 'joao@email', senha: '1234', vale: '500')
+  ];
+
+  for (var usuario in usuarios) {
+    usuario.exibirInformacoes();
+  }
+
+  runApp(const MyApp());
+}
+
+void estruturaControle() {
+  // For tradicional
+  for (var i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  // For em lista
+  var times = ['Palmeiras', 'Palmeiras', 'Palmeiras', 'Corinthians'];
+  for (var time in times) {
+    print('Time: $time');
+  }
+
+  // While e do while
+  int tentativas = 0;
+  while (tentativas < 3) {
+    print('Tentativas ${tentativas}');
+    tentativas++;
+  }
+
+  int senha = 0;
+  do {
+    senha++;
+  } while(senha < 1);
+
+}
+
+void lista() {
+  List<String> frutas = ['maçã', 'banana', 'uva', 'pessego'];
+
+  for (var fruta in frutas) {
+    print(fruta);
+  }
+}
+
+void mapExemplo() {
+  Map<String, int> notas = {'Ana': 8, 'Bruno': 6};
+
+  notas.forEach((aluno, nota) {
+    print('$aluno: $nota');
+  });
+}
+
+void setExemplo() {
+  Set<int> idsUnicos = {1, 2, 3};
+
+  print('Ids unicos $idsUnicos');
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Aula componentes')),
+        body: ListView(
+          children: const [
+            ProfileCard(name: 'Matheus', role: 'SEO'),
+            ProfileCard(name: 'Jotair', role: 'BOSS'),
+            ProfileCard(name: 'Zampi', role: 'Sem mundial'),
+          ],
+        ),
+      ),
+    );
+  }
 }

@@ -1,4 +1,4 @@
-import 'usuario.dart';
+import 'package:uniguairaca/models/usuario.dart';
 
 class Administrador extends Usuario {
   String _cargo;
@@ -10,14 +10,12 @@ class Administrador extends Usuario {
     required String cargo,
   }) : _cargo = cargo;
 
-  // Getters e Setters
+  // Getter e setter de cargo
   String get cargo => _cargo;
-  set cargo(String novoCargo) {
-    _cargo = novoCargo;
-  }
+  set cargo(String novoCargo) {_cargo = novoCargo; }
 
   @override
   void exibirInformacoes() {
-    print('Nome: $nome Email: $email Senha: $senha Cargo: $cargo');
+    print('Nome: ${super.nome} Email: ${super.email} Senha: ${super.senha} Cargo: $cargo');
   }
 }
